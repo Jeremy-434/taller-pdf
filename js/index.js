@@ -1,12 +1,12 @@
 
 function generarPdfHamburguesa() {
 
-    let tipoDeHamburguesa = document.getElementById('').value;
-    let tipoDeBebida = document.getElementById('').value;
-    let tipoDePostre = document.getElementById('').value;
-    let numPersonas = document.getElementById('').value;
-    let nombre = document.getElementById('').value;
-    let direccion = document.getElementById('').value;
+    let tipoDeHamburguesa = document.getElementById('TipodeHamburguesa').value;
+    let tipoDeBebida = document.getElementById('TipodebebidaHamburguesa').value;
+    let tipoDePostre = document.getElementById('TipodepostreHamburguesa').value;
+    let numPersonas = document.getElementById('Cantidadpers').value;
+    let nombre = document.getElementById('Nombre').value;
+    let direccion = document.getElementById('Direccion').value;
 
     var doc = new jsPDF();
 
@@ -20,18 +20,18 @@ function generarPdfHamburguesa() {
     doc.text(20, 60, 'Tipo De Postre:' + tipoDePostre);
     doc.text(20, 70, 'Numero de personas:' + numPersonas);
     doc.text(20, 80, 'Nombre:' + nombre);
-    doc.text(20, 80, 'Direccion:' + direccion);
+    doc.text(20, 90, 'Direccion:' + direccion);
     doc.save('hamburguesa-pdf');
 }
 
 function generarPdfPerroCaliente() {
 
-    let tipoDePerroCaliente = document.getElementById('').value;
-    let tipoDeBebida = document.getElementById('').value;
-    let tipoDePostre = document.getElementById('').value;
-    let numPersonas = document.getElementById('').value;
-    let nombre = document.getElementById('').value;
-    let direccion = document.getElementById('').value;
+    let tipoDePerroCaliente = document.getElementById('opcion_1').value;
+    let tipoDeBebida = document.getElementById('Tipodebebida').value;
+    let tipoDePostre = document.getElementById('Tipodepostre').value;
+    let numPersonas = document.getElementById('opcion_4').value;
+    let nombre = document.getElementById('opcion_5').value;
+    let direccion = document.getElementById('opcion_6').value;
 
     var doc = new jsPDF();
 
@@ -45,6 +45,6 @@ function generarPdfPerroCaliente() {
     doc.text(20, 60, 'Tipo De Postre:' + tipoDePostre);
     doc.text(20, 70, 'Numero de personas:' + numPersonas);
     doc.text(20, 80, 'Nombre:' + nombre);
-    doc.text(20, 80, 'Direccion:' + direccion);
+    doc.text(20, 90, 'Direccion:' + direccion);
     doc.save('hamburguesa-pdf');
 }
