@@ -1,9 +1,9 @@
 .gallery__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 400px;
-    background-color: #f2f2f2;
     grid-gap: 40px;
+    padding: 100px;
+    
 }
 
 .gallery__img {
@@ -17,6 +17,7 @@
         cursor: pointer;
         overflow: hidden;
         margin-left: 4em;
+        border-radius: 5%;
     }
 
     .gallery__item_2{
@@ -24,10 +25,12 @@
         cursor: pointer;
         overflow: hidden;
         margin-right: 4em;
+        border-radius: 5%;
     }
 
     h1{
         text-align: center;
+        padding: 1em;
     }
 
     .opcion_1{
@@ -50,4 +53,30 @@
         padding: 2em;
     }
 
-    
+    .gallery__container_1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 400px;
+        background-color: #f2f2f2;
+        grid-gap: 40px;
+        padding-top: 5em;
+    }
+
+    .progress{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-top: 5em;
+        margin-left: 5em;
+        padding-right: 5em;
+    }
+
+    .form-check{
+        margin-left: 33em;
+    }
+
+    .btn{
+        margin-left: 33em;
+        padding-top: 5em;
+        margin-top: 5em;
+    }
