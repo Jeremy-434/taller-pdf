@@ -8,6 +8,15 @@ function generarPdfHamburguesa() {
     let nombre = document.getElementById('Nombre').value;
     let direccion = document.getElementById('Direccion').value;
 
+    let checkradio1 = document.getElementById('si').value;
+
+    if (checkradio1.checked) {
+        checkradio1 = "Si";
+    } else {
+        checkradio1 = "No";
+    }
+
+
     var doc = new jsPDF();
 
     doc.setFontSize(20);
@@ -21,6 +30,7 @@ function generarPdfHamburguesa() {
     doc.text(20, 70, 'Numero de personas:' + numPersonas);
     doc.text(20, 80, 'Nombre:' + nombre);
     doc.text(20, 90, 'Direccion:' + direccion);
+    doc.text(20, 100, 'Adicional:' + checkradio1);
     doc.save('hamburguesa-pdf');
 }
 
@@ -32,6 +42,13 @@ function generarPdfPerroCaliente() {
     let numPersonas = document.getElementById('opcion_4').value;
     let nombre = document.getElementById('opcion_5').value;
     let direccion = document.getElementById('opcion_6').value;
+    let checkradio1 = document.getElementById('si').value;
+
+    if (checkradio1.checked) {
+        checkradio1 = "Si";
+    } else {
+        checkradio1 = "No";
+    }
 
     var doc = new jsPDF();
 
@@ -46,5 +63,8 @@ function generarPdfPerroCaliente() {
     doc.text(20, 70, 'Numero de personas:' + numPersonas);
     doc.text(20, 80, 'Nombre:' + nombre);
     doc.text(20, 90, 'Direccion:' + direccion);
-    doc.save('hamburguesa-pdf');
+    doc.text(20, 100, 'Adicional:' + checkradio1);
+    doc.save('PerroCaliente-pdf');
+
 }
+
