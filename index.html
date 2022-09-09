@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Document</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./perro.html">Perro Caliente</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./hamburguesa.html">Hamburguesa</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./perro.html">Perro Caliente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./hamburguesa.html">Hamburguesa</a>
+                    </li>
 
-      <div class="gallery__container">
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="gallery__container">
         <div class="gallery__item_1">
-            <a href="./perro.html"><img src="./img/120217563-salchicha-perritos-calientes-de-salchicha-con-patatas-fritas-patatas-fritas-pepinillos-kétchup-y-mos.webp" class="gallery__img" /></a>
-         </div>
- 
-        <div class="gallery__item_2">
-           <a href="./hamburguesa.html"><img src="./img/istockphoto-1188412964-612x612.jpg" class="gallery__img"/></a>
+            <a href="./perro.html"><img
+                    src="./img/120217563-salchicha-perritos-calientes-de-salchicha-con-patatas-fritas-patatas-fritas-pepinillos-kétchup-y-mos.webp"
+                    class="gallery__img" /></a>
         </div>
 
+        <div class="gallery__item_2">
+            <a href="./hamburguesa.html"><img src="./img/istockphoto-1188412964-612x612.jpg" class="gallery__img" /></a>
+        </div>
+    </div>
 
+    <div class="row text-center">
+        <div class="col-12"> ¿Esta satisfecho con el menu?
+            <div>
+                <input type="range" id="input-menu" min="0" max="10">
+            </div>
+        </div>
+        <div class="col-12"> ¿Esta satisfecho con la interfaz?
+            <div>
+                <input type="range" id="input-interfaz" min="0" max="10">
+            </div>
+        </div>
+        <div class="col-12"> ¿Esta satisfecho en general?
+            <div>
+                <input type="range" id="input-general" min="0" max="10">
+            </div>
+        </div>
+    </div>
+    <button onclick="generarGrafico()" class="btn btn-primary">Generar Grafica</button>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="jsPDF-1.3.2\dist\jspdf.min.js"></script> 
-    <script src="js\index.js"></script>
-    <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+    <div class="row">
+        <div class="col">
+            <div id="miDiv2"></div>
+        </div>
+        <div class="col">
+            <div id="miDiv"></div>
+        </div>
+    </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+<script src="jsPDF-1.3.2\dist\jspdf.min.js"></script>
+<script src="js\index.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+<script src="js/grafico.js"></script>
+
 </html>
